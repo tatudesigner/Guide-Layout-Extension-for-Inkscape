@@ -69,7 +69,7 @@ GNU General Public License v3.0 (or later). See the license header in `guide_lay
 
 ## Author
 
-Created by **Tatudesigner** ([heriton.agoncalves@gmail.com](mailto:heriton.agoncalves@gmail.com)), also the author of [Design Grid](https://github.com/tatudesigner/Design-Grid-Extension-for-Inkscape).
+Created by **Tatudesigner** ([tatudesigner@gmail.com](mailto:tatudesigner@gmail.com)), also the author of [Design Grid](https://github.com/tatudesigner/Design-Grid-Extension-for-Inkscape).
 
 ## Feedback
 
