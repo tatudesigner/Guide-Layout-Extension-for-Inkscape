@@ -4,6 +4,8 @@
 
 It was built as a lightweight alternative to Inkscape's built-in **Guides Creator** extension.
 
+![Guide Layout Preview](./images/image1.png)
+
 ## Why
 
 Inkscape's built-in Guides Creator is powerful, but it can be overwhelming for newer users: multiple tabs (Regular guides / Diagonal guides / Margins), preset dropdowns, fraction-based margins, and book-layout presets that assume prior knowledge of editorial terminology.
@@ -20,6 +22,8 @@ Guide Layout takes the opposite approach: **one flat panel, plain language, sens
 - **Clear existing guides**, to remove previously created guides before generating a new layout — no manual cleanup needed between attempts.
 - **Real Inkscape guides only.** Nothing is drawn on the canvas — no rectangles, no paths, no extra layers left behind. Everything created is a standard `sodipodi:guide`, draggable and snappable like any guide you'd pull from the ruler yourself.
 - **Live preview** support, using Inkscape's native extension preview.
+
+  ![Guide Layout Preview](./images/image2.png)
 
 ## Requirements
 
