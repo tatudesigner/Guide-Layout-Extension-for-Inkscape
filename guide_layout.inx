@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+
+  <name>Guide Layout</name>
+  <id>tatudesigner.guide_layout</id>
+
+  <hbox>
+    <vbox>
+      <param name="enable_columns" type="bool" _gui-text="Columns" default="true">true</param>
+      <param name="columns_count" type="int" _gui-text="Number:" min="1" max="100" default="12">12</param>
+      <param name="column_width" type="float" _gui-text="Width:" min="0" max="2000" default="0">0</param>
+      <param name="gutter_h" type="float" _gui-text="Gutter:" min="0" max="500" default="16">16</param>
+    </vbox>
+    <spacer size="24"/>
+    <vbox>
+      <param name="enable_rows" type="bool" _gui-text="Rows" default="false">false</param>
+      <param name="rows_count" type="int" _gui-text="Number:" min="1" max="100" default="6">6</param>
+      <param name="row_height" type="float" _gui-text="Height:" min="0" max="2000" default="0">0</param>
+      <param name="gutter_v" type="float" _gui-text="Gutter:" min="0" max="500" default="16">16</param>
+    </vbox>
+  </hbox>
+
+  <separator/>
+
+  <param name="enable_margins" type="bool" _gui-text="Margin" default="false">false</param>
+  <hbox>
+    <param name="margin_top" type="float" _gui-text="Top:" min="0" max="1000" default="0">0</param>
+    <spacer size="24"/>
+    <param name="margin_bottom" type="float" _gui-text="Bottom:" min="0" max="1000" default="0">0</param>
+  </hbox>
+  <hbox>
+    <param name="margin_left" type="float" _gui-text="Left:" min="0" max="1000" default="0">0</param>
+    <spacer size="24"/>
+    <param name="margin_right" type="float" _gui-text="Right:" min="0" max="1000" default="0">0</param>
+  </hbox>
+
+  <separator/>
+
+  <param name="guide_color" type="color" _gui-text="Guide color:" default="#0066ffff">#0066ffff</param>
+  <param name="clear_existing" type="bool" _gui-text="Clear existing guides" default="false">false</param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Render">
+      </submenu>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command location="inx" interpreter="python">guide_layout.py</command>
+  </script>
+
+</inkscape-extension>
