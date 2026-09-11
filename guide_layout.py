@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Tatudesigner <tatudesigner@gmail.com>
+# Copyright (C) 2026 Tatudesigner <tatudesigner@gmail.com>
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -34,12 +34,7 @@ CONVERSIONS = {
     'px': 1.0,
     'mm': 3.779527559055118,
     'cm': 37.79527559055118,
-    'm': 3779.527559055118,
-    'km': 3779527.559055118,
-    'Q': 0.94488188976378,
     'pc': 16.0,
-    'yd': 3456.0,
-    'ft': 1152.0,
     '': 1.0,  # Default px
 }
 
@@ -83,6 +78,16 @@ class GuideLayout(inkex.EffectExtension):
     # -------------------------------------------------------------------
 
     def effect(self):
+        if self.svg.unit not in CONVERSIONS:
+            inkex.errormsg(
+                _(
+                    "This document's unit ('{}') is not supported — likely because it's set to "
+                    "percentage (%), which has no fixed size. Please change the document's unit in "
+                    "File > Document Properties to mm, cm, in, px, pt, or pc, and try again."
+                ).format(self.svg.unit)
+            )
+            return
+
         if self.options.clear_existing:
             self.clear_existing_guides()
 
